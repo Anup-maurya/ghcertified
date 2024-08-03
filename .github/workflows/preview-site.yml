@@ -5,6 +5,10 @@ on:
     types:
       - labeled
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   deploy:
     name: Deploy to Cloudflare Pages
@@ -39,3 +43,16 @@ jobs:
             Please visit ${{ steps.deploy.outputs.alias }}) to see how your changes are reflected on the site.
             Please verify everything looks as expected. Thank you for your contribution :rocket:!
           edit-mode: 'replace'
+      - name: Remove Label
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue_number = context.issue.number;
+            const labelToRemove = 'request-preview-deployment';
+            github.rest.issues.removeLabel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number,
+              name: labelToRemove
+            });
