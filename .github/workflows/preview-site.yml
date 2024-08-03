@@ -33,6 +33,7 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
           directory: 'public/'
+          branch: ${{ github.event.pull_request.head.ref }}
       - name: Comment on PR
         uses: peter-evans/create-or-update-comment@v4
         with:
