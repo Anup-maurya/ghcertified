@@ -9,7 +9,7 @@ weight: 50
 
 ## What do I need to know?
 
-GitHub prepared study guides for each of the available certification exams. They list out all the topics covered in the exam. 
+Thankfully GitHub prepared study guides for each of the available certification exams. They list out all the topics covered in the exam. 
 
 - [Study Guide: GitHub Foundations](https://assets.ctfassets.net/wfutmusr1t3h/1kmMx7AwI4qH8yIZgOmQlP/79e6ff1dfdee589d84a24dd763b1eef7/github-foundations-exam-study-guide__1_.pdf)
 - [Study Guide: GitHub Actions](https://assets.ctfassets.net/wfutmusr1t3h/2mMJ6nECbUAdiQMTObbPw6/67cfbffa68fed774a1d280c6c1346635/github-actions-exam-preparation-study-guide__3_.pdf)
